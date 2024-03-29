@@ -1,0 +1,64 @@
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.imge {
+  background-image: url(../../../img/hero/hero-1.jpg);
+
+  background-size: cover;
+  width: 100%;
+}
+.size-sec1 {
+  height: 47pc;
+}
+.ms-sec2 {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.mt {
+  margin-left: 4%;
+  margin-right: 3%;
+}
+.mt-7-sec2 {
+  margin-top: 7%;
+}
+.space {
+  letter-spacing: 4px;
+  font-size: smaller;
+  border-bottom: 2px solid;
+  width: 45%;
+}
+.img-width-sec3 {
+  width: 15pc;
+}
+.img-width2-sec3 {
+  width: 20pc;
+}
+/* .width-sec3{
+    width: 17pc;  
+} */
+.text-edit {
+  width: 17pc;
+  text-align: center;
+}
+.p-3 {
+  width: 10pc;
+}
+.bg-sec3 {
+  background-image: url(../../../img/about-us.jpg);
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+}
+.header {
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  height: fit-content;
+  padding-right: 1em;
+  padding-left: 1em;
+}

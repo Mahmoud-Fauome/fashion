@@ -1,0 +1,21 @@
+.transition {
+  transition: 0.3s;
+}
+.transition:hover {
+  content: "";
+  transform: scale(1.1);
+}
+.btnHover:hover {
+  transform: scale(1.1);
+  background-color: #ffc107;
+}
+.header {
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  height: fit-content;
+  padding-right: 1em;
+  padding-left: 1em;
+}
