@@ -20,7 +20,7 @@ const Profile = () => {
   document.body.style.backgroundColor = "rgb(102 102 102)";
 
   return (
-    <div className=" container fontFamily  d-flex flex-column	justify-content-between  text-white mt-3">
+    <div className="container fontFamily  d-flex flex-column	justify-content-between  text-white mt-3">
       <div style={{ width: "16em" }} className=" mb-2 text-center ">
         <img className="w-75 rounded-circle" src={profileCompar.image} alt="" />
       </div>

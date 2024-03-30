@@ -1,10 +1,10 @@
+import "./header.css";
 import React, { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import "./header.css";
 import imag from "../../img/logo.png";
 import { AiOutlineLock } from "react-icons/ai";
 import { FiLogIn } from "react-icons/fi";
@@ -37,9 +37,9 @@ const Header = () => {
     <div>
       <Navbar bg="light" expand="lg" className="fw-bolder bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">
+          <Link to="/   ">
             <img src={imag} />
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="m-auto">
@@ -55,8 +55,15 @@ const Header = () => {
             </Nav>
             <div className="d-flex  me-4">
               {" "}
-              <AiOutlineLock className=" fs-4" onClick={goToShoppingCart} />
+              <AiOutlineLock
+                className="position-relative fs-4 mt-1"
+                onClick={goToShoppingCart}
+              />
               <h6
+                style={{
+                  position: "absolute",
+                  marginLeft: "1em",
+                }}
                 className={
                   addToShoping.length > 0
                     ? "rounded-circle px-1 text-light bg-success"
@@ -69,10 +76,10 @@ const Header = () => {
 
             {localStorage.role !== "admin" && localStorage.role !== "member" ? (
               <Link to={"/SignIn"}>
-                <FiLogIn className="fs-4 ms-3" />
+                <FiLogIn className="fs-4 mt-1" />
               </Link>
             ) : (
-              <div className="d-flex flex-row">
+              <div className="d-flex flex-row mt-1">
                 <img
                   className=" rounded-circle"
                   style={{ width: "2.5em" }}
@@ -90,7 +97,7 @@ const Header = () => {
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
 
-                  <NavDropdown.Item href="#action/3.4" onClick={goToLogin}>
+                  <NavDropdown.Item onClick={goToLogin}>
                     Log Out
                   </NavDropdown.Item>
                 </NavDropdown>

@@ -7,11 +7,13 @@ import "./products.css";
 const Products = () => {
   let { productsData, addToCart } = useContext(Store);
 
+  document.body.style.backgroundColor = "white";
+
   return (
-    <div className=" bg-white mt-5 container d-flex flex-wrap justify-content-between">
+    <div className=" bg-white mt-5 container d-flex flex-wrap justify-content-evenly">
       {productsData.map((product) => (
         <Card
-          className="text-center me-5 mb-5 transition border-0"
+          className="text-center mx-4 mb-5 transition border-0"
           key={product.id}
           style={{ width: "13rem" }}
         >

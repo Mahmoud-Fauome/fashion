@@ -22,6 +22,7 @@ import AdminAuth from "./Authentication/adminAimuth";
 import AuthProfile from "./Authentication/authProfile";
 import AddUser from "./components/Users/addUser";
 import DetailsUsers from "./components/Users/detailsUsers";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   const [productsData, setProductsData] = useState([]);
@@ -181,6 +182,7 @@ const App = () => {
           <Route path="/products/shoppingCart" element={<ShoppingCart />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer />
       </Store.Provider>
     </div>
   );

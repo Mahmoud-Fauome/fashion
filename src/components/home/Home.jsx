@@ -49,7 +49,7 @@ const Home = () => {
         <div className="mt-5 container d-flex  justify-content-start ">
           <img src={img2} width="32%" className=" mt" />
           <div className="d-flex  justify-content-center flex-column">
-            <h2>Shoes Spring</h2>
+            <h2>Glasses Spring</h2>
             <h2>Collections 2023</h2>
             <h6 className="space">SHOP NOW</h6>
           </div>
@@ -75,11 +75,11 @@ const Home = () => {
       </div>
 
       {/* /////////////////////////////////////////////////////////////////////////////////// */}
-      <div className="mt-5 container-fluid d-flex">
+      <div className="mt-5  d-flex flex-wrap justify-content-center">
         {data.length > 0 &&
           data.map((prod) => (
             <div
-              className="d-flex flex-column align-items-center w-25"
+              className="col-lg-3 col-sm-5  col-sm-4  d-flex flex-column align-items-center mb-5"
               key={prod.id}
             >
               <p

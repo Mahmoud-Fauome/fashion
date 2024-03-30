@@ -35,7 +35,7 @@ const SignIn = () => {
   };
   document.body.style.backgroundColor = "#bec0c8";
   return (
-    <div className="fw-bolder mt-5 d-flex flex-column align-items-center">
+    <div className="py-5 mt-1 fw-bolder d-flex flex-column align-items-center">
       <form onSubmit={handelSignIn}>
         <div className="mb-2 d-flex flex-column">
           <label className={CheckEmail ? "mb-2 text-dark" : "mb-2 text-danger"}>

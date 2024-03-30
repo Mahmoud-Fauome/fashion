@@ -20,9 +20,9 @@ const Admin = () => {
 
   let lastProduct = productsData.slice(-1);
   let lastUser = usersData.slice(-1);
-  // document.body.style.backgroundColor="withe"
+  document.body.style.backgroundColor = "white";
   return (
-    <div className=" flex-wrap bg-withe mt-5 d-flex justify-content-evenly">
+    <div className=" flex-wrap my-5 py-2 d-flex justify-content-evenly">
       <div className="admin rounded-5 text-center p-5 bg-secondary">
         <h1 className="mb-4 text-primary">Users</h1>
         <h3 className="mb-4 text-light">

@@ -10,8 +10,10 @@ import { Link } from "react-router-dom";
 const ShoppingCart = () => {
   const { addToShoping, deletCart, minusNumber, addNumber } = useContext(Store);
 
+  document.body.style.backgroundColor = "white";
+
   return (
-    <div className="mediaShop container className d-flex justify-content-between">
+    <div className="mediaShop container className d-flex justify-content-between mt-5 mb-5">
       {addToShoping.length > 0 ? (
         <div>
           {addToShoping.map((product) => (

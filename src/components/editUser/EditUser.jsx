@@ -135,21 +135,14 @@ const EditUser = () => {
   //   }).then((e)=>{setSignData(e.data);})
   // },[])
 
-  // document.body.style.backgroundColor = "rgb(102 102 102)";
+  document.body.style.backgroundColor = "rgb(102 102 102)";
 
   return (
-    <div
-      // style={{ width: "48em" }}
-      className="formWidth  flex-column mt-4 d-flex justify-content-between"
-    >
+    <div className="formWidth  flex-column mt-4 d-flex justify-content-between">
       <div style={{ width: "18em" }} className="mb-3 text-center">
         <img className="w-75 rounded-circle" src={image} />
       </div>
-      <form
-        className="border-top pt-3 fw-bolder "
-        // style={{ marginRight: "17em" }}
-        onSubmit={handelForm}
-      >
+      <form className="border-top pt-3 fw-bolder " onSubmit={handelForm}>
         {/* //////////////////////////////firstName && secondName && userName//////////////////////////////////// */}
         <div className="mb-2 d-flex justify-content-between ">
           <div className="d-flex flex-column">
