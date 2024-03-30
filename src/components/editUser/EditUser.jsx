@@ -6,7 +6,7 @@ import Store from "../../Contexts/globalContext";
 import "./editUser.css";
 
 const EditUser = () => {
-  const { usersData } = useContext(Store);
+  // const { usersData } = useContext(Store);
   const { editUser } = useParams();
   const regEmail = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
   const [fName, setfName] = useState("");
@@ -45,7 +45,7 @@ const EditUser = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `http://localhost:9000/users/${editUser}`,
+      url: `https://data-pfz0.onrender.com/users/${editUser}`,
     }).then((res) => {
       setfName(res.data.firstName);
       setSName(res.data.lastName);

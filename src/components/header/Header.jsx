@@ -10,9 +10,6 @@ import { AiOutlineLock } from "react-icons/ai";
 import { FiLogIn } from "react-icons/fi";
 import Store from "../../Contexts/globalContext";
 import Swal from "sweetalert2";
-import { getDefaultNormalizer } from "@testing-library/react";
-import "./header.css";
-import Profile from "../profile/profile";
 
 const Header = () => {
   const navi = useNavigate();
@@ -56,14 +53,14 @@ const Header = () => {
                 About Us
               </Nav.Link>
             </Nav>
-            <div className="d-flex">
+            <div className="d-flex  me-4">
               {" "}
               <AiOutlineLock className=" fs-4" onClick={goToShoppingCart} />
               <h6
                 className={
                   addToShoping.length > 0
-                    ? "rounded-circle ps-1 pe-1 text-light bg-success"
-                    : "rounded-4  ps-1 pe-1 text-light bg-danger"
+                    ? "rounded-circle px-1 text-light bg-success"
+                    : "rounded-4  px-1 text-light bg-danger"
                 }
               >
                 {addToShoping.length}
@@ -77,7 +74,7 @@ const Header = () => {
             ) : (
               <div className="d-flex flex-row">
                 <img
-                  className="ms-4 rounded-circle"
+                  className=" rounded-circle"
                   style={{ width: "2.5em" }}
                   src={localStorage.imge}
                 />

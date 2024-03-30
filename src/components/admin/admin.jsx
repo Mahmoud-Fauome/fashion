@@ -9,12 +9,12 @@ const Admin = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:9000/products",
+      url: "https://data-pfz0.onrender.com/products",
     }).then((data) => setProductsData(data.data));
 
     axios({
       method: "get",
-      url: "http://localhost:9000/users",
+      url: "https://data-pfz0.onrender.com/users",
     }).then((data) => setuUersData(data.data));
   }, []);
 

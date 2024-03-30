@@ -31,14 +31,14 @@ const App = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `http://localhost:9000/products`,
+      url: `https://data-pfz0.onrender.com/products`,
     }).then((res) => setProductsData(res.data));
   }, []);
 
   useEffect(() => {
     axios({
       method: "get",
-      url: `http://localhost:9000/users`,
+      url: `https://data-pfz0.onrender.com/users`,
     }).then((res) => setUsersData(res.data));
   }, []);
 

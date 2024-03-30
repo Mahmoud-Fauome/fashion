@@ -13,7 +13,7 @@ const SignIn = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:9000/users",
+      url: "https://data-pfz0.onrender.com/users",
     }).then((data) => {
       setDataSignIn(data.data);
     });

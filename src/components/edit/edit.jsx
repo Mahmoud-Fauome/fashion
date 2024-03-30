@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
-import Spinner from "react-bootstrap/Spinner";
+// import Spinner from "react-bootstrap/Spinner";
 
 const Edit = () => {
   const navi = useNavigate();
@@ -15,19 +15,16 @@ const Edit = () => {
   const [saleName, setSaleName] = useState("");
   const [saleColor, setSaleColor] = useState("");
   const [saleBackground, setSaleBackground] = useState("");
-  // const[data,setdata]=useState([])
-  //    const{color} =data
-  //        console.log(color);
+
   useEffect(() => {
     axios({
       method: "get",
-      url: `http://localhost:9000/products/${editId}`,
+      url: `https://data-pfz0.onrender.com/products/${editId}`,
     }).then((res) => {
       setName(res.data.name);
       setPrice(res.data.price);
       setCategory(res.data.sort);
       setImage(res.data.image);
-      // setdata(res.data)
     });
   }, []);
 
@@ -36,7 +33,7 @@ const Edit = () => {
 
     axios({
       method: "put",
-      url: `http://localhost:9000/products/${editId}`,
+      url: `https://data-pfz0.onrender.com/products/${editId}`,
       data: {
         name,
         price,
@@ -134,9 +131,3 @@ const Edit = () => {
   );
 };
 export default Edit;
-{
-  /* <input type="text"   value={name} onChange={(e)=> setName (e.target.value)}/>
-<input type="number" value={price}onChange={(e)=> setPrice(e.target.value)}/>
-<input type="number" value={items} onChange={(e)=> setItem (e.target.value)}/>
-<input type="text"   value={image}onChange={(e)=> setImage(e.target.value)}/> */
-}

@@ -1,14 +1,14 @@
+import "./profile.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./profile.css";
 
 const Profile = () => {
   const [dataProfile, setDataProfile] = useState([]);
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:9000/users",
+      url: "https://data-pfz0.onrender.com/users",
     }).then((data) => {
       setDataProfile(data.data);
     });
@@ -39,22 +39,6 @@ const Profile = () => {
             <h3 className="mb-5">City : {profileCompar.city}</h3>
           </div>
         </div>
-        {/* <div className="justify-content-between d-flex  flex-wrap">
-          <h3 className="mb-5">UserName : {profileCompar.userName}</h3>
-          <h3>FirstName : {profileCompar.firstName}</h3>
-        </div>
-        <div className=" justify-content-between d-flex  flex-wrap">
-          <h3 className="mb-5">LastName : {profileCompar.lastName}</h3>
-          <h3>Gender : {profileCompar.gender}</h3>
-        </div>
-        <div className="justify-content-between d-flex  flex-wrap">
-          <h3 className="mb-5">Password : {profileCompar.password}</h3>
-          <h3>Email : {profileCompar.email}</h3>
-        </div>
-        <div className="justify-content-between d-flex  flex-wrap">
-          <h3 className="mb-5">City : {profileCompar.city}</h3>
-          <h3>PhoneNumber : {profileCompar.phoneNumber}</h3>
-        </div> */}
         <div className="d-flex align-items-center flex-column">
           <h3 className="mb-5">Role : {profileCompar.role}</h3>
           <Link to={`/profile/editUser/${profileCompar.id}`}>
