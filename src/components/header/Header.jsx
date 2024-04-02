@@ -53,7 +53,7 @@ const Header = () => {
                 About Us
               </Nav.Link>
             </Nav>
-            <div className="d-flex  me-4">
+            <div className="d-flex  me-4 mb-2">
               {" "}
               <AiOutlineLock
                 className="position-relative fs-4 mt-1"
@@ -76,10 +76,10 @@ const Header = () => {
 
             {localStorage.role !== "admin" && localStorage.role !== "member" ? (
               <Link to={"/SignIn"}>
-                <FiLogIn className="fs-4 mt-1" />
+                <FiLogIn className="fs-4" />
               </Link>
             ) : (
-              <div className="d-flex flex-row mt-1">
+              <div className="d-flex flex-row">
                 <img
                   className=" rounded-circle"
                   style={{ width: "2.5em" }}
