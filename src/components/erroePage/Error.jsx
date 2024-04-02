@@ -9,8 +9,8 @@ const Error = () => {
   };
 
   return (
-    <div style={{ padding: "9em" }} className="text-center text-danger">
-      <h6 className="mb-4">Error Page || 404</h6>
+    <div style={{ padding: "8.4em" }} className="text-center text-danger">
+      <h1 className="mb-4">Error Page || 404</h1>
       <Button onClick={back}>back to home</Button>
     </div>
   );
