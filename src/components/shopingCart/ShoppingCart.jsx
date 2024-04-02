@@ -13,52 +13,51 @@ const ShoppingCart = () => {
   document.body.style.backgroundColor = "white";
 
   return (
-    <div className="mediaShop container className d-flex justify-content-between mt-5 mb-5">
-      {addToShoping.length > 0 ? (
-        <div>
-          {addToShoping.map((product) => (
-            <Card
-              key={product.id}
-              className="border-0 border-bottom rounded-0 mt-5 ms-5 d-flex flex-row align-items-center"
-              style={{ width: "75%" }}
-            >
-              <Card.Img
-                variant="top"
-                style={{ width: "18%" }}
-                src={product.img}
-              />
-              <Card.Body className="d-flex  justify-content-between">
-                <Card.Title className="w-25 fs-6">{product.name}</Card.Title>
+    <div
+      style={{ height: "70vh" }}
+      className="row mediaShop container className d-flex justify-content-between my-5"
+    >
+      <div className="col-lg-9">
+        {addToShoping.length > 0 ? (
+          <div>
+            {addToShoping.map((product) => (
+              <Card
+                key={product.id}
+                className="border-0 border-bottom rounded-0 mt-5 ms-5 d-flex flex-row align-items-center"
+              >
+                <Card.Img variant="top" className="w-25" src={product.img} />
+                <Card.Body className="d-flex  justify-content-between">
+                  <Card.Title className="w-25 fs-6">{product.name}</Card.Title>
 
-                <h2 onClick={() => minusNumber(product)}>-</h2>
-                <h3>{product.count}</h3>
-                <h2 onClick={() => addNumber(product)}>+</h2>
+                  <h2 onClick={() => minusNumber(product)}>-</h2>
+                  <h3>{product.count}</h3>
+                  <h2 onClick={() => addNumber(product)}>+</h2>
 
-                <Card.Text className="fs-3">$ {product.price}</Card.Text>
-                <AiFillDelete
-                  className="fs-3"
-                  onClick={() => deletCart(product)}
-                />
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      ) : (
-        <div className="d-flex flex-column align-items-center">
-          <img className="w-50" src={emptyShopping} />
-          <Link to="/products">
-            <Button className=" text-center fw-bolder" variant="secondary">
-              SHOP NOW
-            </Button>
-          </Link>
-        </div>
-      )}
-      <div className="mt-5 me-2">
-        <Card style={{ width: "15rem" }} className="border-0 rounded-0">
-          <Card.Body
-            style={{ width: "15rem" }}
-            className="bg-light position-fixed"
-          >
+                  <Card.Text className="fs-3">$ {product.price}</Card.Text>
+                  <AiFillDelete
+                    className="fs-3"
+                    onClick={() => deletCart(product)}
+                  />
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        ) : (
+          <div className="d-flex flex-column align-items-center">
+            <img style={{ width: "27em" }} src={emptyShopping} />
+            <Link to="/products">
+              <Button className=" text-center fw-bolder" variant="secondary">
+                SHOP NOW
+              </Button>
+            </Link>
+          </div>
+        )}
+      </div>
+
+      {/* //////////////////////////////////////////////////////////////////// */}
+      <div className="mt-5 me-2 col-lg-2 ">
+        <Card className="border-0 rounded-0 align-items-center">
+          <Card.Body style={{ width: "15rem" }} className="bg-light ">
             <Card.Title>Card Total</Card.Title>
             <div className="d-flex justify-content-between">
               <h3>

@@ -10,7 +10,6 @@ import Store from "../../Contexts/globalContext";
 const Home = () => {
   let { productsData } = useContext(Store);
   const data = productsData.slice(0, 4);
-  console.log(data);
 
   return (
     <div className="bg-white">
