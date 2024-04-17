@@ -36,7 +36,7 @@ const SignIn = () => {
   document.body.style.backgroundColor = "#bec0c8";
   return (
     <div
-      style={{ paddingBottom: "5em", paddingTop: "5em" }}
+      style={{ paddingBottom: "7em", paddingTop: "7em" }}
       className="mt-1 fw-bolder d-flex flex-column align-items-center"
     >
       <form onSubmit={handelSignIn}>
