@@ -180,6 +180,7 @@ const App = () => {
           />
           <Route path="/products" element={<Products />} />
           <Route path="/products/shoppingCart" element={<ShoppingCart />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
